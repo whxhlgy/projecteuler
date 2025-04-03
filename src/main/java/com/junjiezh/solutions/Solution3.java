@@ -1,16 +1,9 @@
 package com.junjiezh.solutions;
 
+import static com.junjiezh.utils.math.PrimeUtil.isPrime;
+
 public class Solution3 {
     private static final long NUMBER = 600851475143L;
-    private static boolean isPrime(long num) {
-        double limit = Math.floor(Math.sqrt(num));
-        for (long i = 2; i <= limit; i++) {
-            if (num % i == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
     public static void main(String[] args) {
         long limit = (long) Math.floor(Math.sqrt(NUMBER));
         long max = Long.MIN_VALUE;
